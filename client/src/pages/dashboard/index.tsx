@@ -1,7 +1,12 @@
 import * as React from "react";
+import { BoardContainer } from "components";
 
 function Dashboard() {
-	return <div>Dashboard</div>;
+	return (
+		<main>
+			<BoardContainer />
+		</main>
+	);
 }
 
 export default Dashboard;
