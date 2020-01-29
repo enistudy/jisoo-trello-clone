@@ -5,7 +5,7 @@ import { reducer, initialState } from "./reducer";
 interface CreateButtonProps {
 	title: string;
 	className?: string;
-	createItemCallback?: (title: string) => void;
+	createItemCallback?: (newItemName: string) => void;
 }
 
 function CreateButton({
