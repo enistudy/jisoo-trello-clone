@@ -1,13 +1,18 @@
 import * as React from "react";
-import { useState, useCallback } from "react";
+import { useState, useCallback, memo } from "react";
 import { Link } from "react-router-dom";
 
 import { CreateButton } from "components";
 
 import "./style.scss";
 
-interface BoardProps {
+interface BoardContainerProps {
 	className?: string;
+}
+
+interface BoardProps {
+	id: string;
+	name: string;
 }
 
 interface Board {
@@ -20,7 +25,17 @@ const initialState: Board[] = [
 	{ id: "2", name: "second" }
 ];
 
-function BoardContainer({ className }: BoardProps) {
+function Board({ id, name }: BoardProps) {
+	return (
+		<Link to={`/boards/${id}`} className="Board" key={id}>
+			{name}
+		</Link>
+	);
+}
+
+const ButtonMemo = memo(Board);
+
+function BoardContainer({ className }: BoardContainerProps) {
 	const [boards, setBoards] = useState<Board[]>(initialState);
 	const handleCreateBoard = useCallback(
 		(newItemName: string) => {
@@ -34,10 +49,8 @@ function BoardContainer({ className }: BoardProps) {
 		<section
 			className={`Board-container-wrapper ${className ? className : ""}`}
 		>
-			{boards.map(({ id, name }, index) => (
-				<Link to={`/boards/${id}`} className="Board" key={id + index}>
-					{name}
-				</Link>
+			{boards.map(({ id, name }) => (
+				<ButtonMemo key={id} id={id} name={name} />
 			))}
 			<CreateButton
 				title="Create board"
