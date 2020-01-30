@@ -1,13 +1,14 @@
 import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { Dashboard } from "pages";
+import { Dashboard, Board } from "pages";
 
 function Root() {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" component={Dashboard}></Route>
+				<Route path="/" exact component={Dashboard}></Route>
+				<Route path="/boards/:id" component={Board}></Route>
 			</Switch>
 		</BrowserRouter>
 	);

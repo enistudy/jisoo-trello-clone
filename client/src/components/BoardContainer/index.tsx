@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 
 import { CreateButton } from "components";
 
@@ -16,27 +17,7 @@ interface Board {
 
 const initialState: Board[] = [
 	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" },
-	{ id: "2", name: "second" },
-	{ id: "1", name: "first" }
+	{ id: "2", name: "second" }
 ];
 
 function BoardContainer({ className }: BoardProps) {
@@ -54,9 +35,9 @@ function BoardContainer({ className }: BoardProps) {
 			className={`Board-container-wrapper ${className ? className : ""}`}
 		>
 			{boards.map(({ id, name }, index) => (
-				<article className="Board" key={id + index}>
+				<Link to={`/boards/${id}`} className="Board" key={id + index}>
 					{name}
-				</article>
+				</Link>
 			))}
 			<CreateButton
 				title="Create board"
