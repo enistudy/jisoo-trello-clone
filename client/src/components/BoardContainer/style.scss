@@ -13,19 +13,19 @@ $color-board: hsl(27, 82%, 91%);
 
 		vertical-align: top;
 	}
-}
 
-.Board {
-	padding: 2rem;
+	.Board {
+		padding: 2rem;
 
-	min-width: 10rem;
+		min-width: 10rem;
 
-	font-size: 2rem;
+		font-size: 2rem;
 
-	background-color: $color-board;
+		background-color: $color-board;
 
-	text-align: center;
-	color: white;
+		text-align: center;
+		color: white;
 
-	cursor: pointer;
+		cursor: pointer;
+	}
 }
