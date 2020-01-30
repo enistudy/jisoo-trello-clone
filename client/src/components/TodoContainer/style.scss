@@ -1,0 +1,16 @@
+$color-todo: black;
+
+.Todo-container-wrapper {
+	height: 100%;
+
+	white-space: nowrap;
+	overflow-x: auto;
+
+	& > * {
+		display: inline-block;
+
+		margin-right: 1rem;
+
+		vertical-align: top;
+	}
+}

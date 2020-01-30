@@ -1,0 +1,45 @@
+$color-todo: black;
+
+.Todo {
+	padding: 1rem;
+
+	background-color: $color-todo;
+
+	.Title {
+		font-size: 2rem;
+		text-align: center;
+		color: white;
+	}
+}
+
+.Create-Todo-form {
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 2rem;
+
+	font-size: 1.5rem;
+
+	.Job-name-input {
+		margin-bottom: 1rem;
+		padding: 1rem;
+
+		background-color: white;
+	}
+
+	.Create-button {
+		padding: 1rem;
+
+		color: white;
+		background-color: skyblue;
+	}
+}
+
+.Job {
+	font-size: 1.5rem;
+
+	margin-bottom: 1rem;
+	padding: 1rem;
+
+	background-color: white;
+}
