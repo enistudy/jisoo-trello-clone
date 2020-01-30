@@ -9,7 +9,8 @@
 		"baseUrl": "./src",
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
-		"strict": true
+		"strict": true,
+		"typeRoots": ["src/@types", "./node_modules/@types"]
 	},
 	"include": ["./src/**/*"],
 	"exclude": ["./node_modules/**/*"]
