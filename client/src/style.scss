@@ -1,7 +1,33 @@
+$haeder-height: 5vh;
+$main-height: 90vh;
+
+html {
+	font-size: 16px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+button,
+input {
+	border: 0;
+}
+
+main {
+	height: $main-height;
+}
+
 .Logo {
 	display: block;
-	margin: 0px auto;
+	margin: 2.5vh auto;
 
 	width: 5rem;
-	height: 5rem;
+	height: $haeder-height;
 }

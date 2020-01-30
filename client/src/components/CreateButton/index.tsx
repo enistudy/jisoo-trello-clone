@@ -2,6 +2,8 @@ import * as React from "react";
 import { useReducer } from "react";
 import { reducer, initialState } from "./reducer";
 
+import "./style.scss";
+
 interface CreateButtonProps {
 	title: string;
 	className?: string;
@@ -29,17 +31,25 @@ function CreateButton({
 	const handleCancelWriteItemName = () => dispatch({ type: "TOGGLE_BUTTON" });
 
 	return (
-		<article className={`Create-Button ${className ? className : ""}`}>
-			<h3 onClick={handleToggleWriteSection}>{title}</h3>
+		<article className={`Create-button-wrapper ${className ? className : ""}`}>
+			<h3 className="Title" onClick={handleToggleWriteSection}>
+				{title}
+			</h3>
 			{toggle && (
-				<form onSubmit={handleCreateItem}>
+				<form className="Create-form" onSubmit={handleCreateItem}>
 					<input
+						type="text"
+						className="Name-input"
 						name="item-name"
 						value={itemName}
 						onChange={handleWriteItemName}
 					/>
-					<button type="submit">Create</button>
-					<button onClick={handleCancelWriteItemName}>Cancel</button>
+					<button className="Create-button" type="submit">
+						Create
+					</button>
+					<button className="Cancel-button" onClick={handleCancelWriteItemName}>
+						Cancel
+					</button>
 				</form>
 			)}
 		</article>

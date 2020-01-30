@@ -1,0 +1,31 @@
+$color-board: hsl(27, 82%, 91%);
+
+.Board-container-wrapper {
+	height: 100%;
+
+	white-space: nowrap;
+	overflow-x: auto;
+
+	& > * {
+		display: inline-block;
+
+		margin-right: 1rem;
+
+		vertical-align: top;
+	}
+}
+
+.Board {
+	padding: 2rem;
+
+	min-width: 10rem;
+
+	font-size: 2rem;
+
+	background-color: $color-board;
+
+	text-align: center;
+	color: white;
+
+	cursor: pointer;
+}
