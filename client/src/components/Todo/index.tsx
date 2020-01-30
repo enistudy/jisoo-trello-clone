@@ -1,5 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
+import { useDroppable } from "react-useful-dnd";
+
+import { Job } from "components";
 
 import "./style.scss";
 
@@ -31,19 +34,23 @@ function CreateJobForm({
 }
 
 interface TodoProps {
-	id: string;
+	todoId: string;
 	name: string;
-	createJobCallback?: (jobName: string) => void;
+	context: React.Context<Todo>;
 }
 
-interface Job {
+interface Todo {
 	id: string;
 	name: string;
 }
 
-function Todo({ id, name }: TodoProps) {
+function Todo({ todoId, name, context }: TodoProps) {
+	const [droppableRef, droppableId, jobs, groupId] = useDroppable<Todo>({
+		id: todoId,
+		context
+	});
+
 	const [jobName, setJobName] = useState<string>("");
-	const [jobs, setJobs] = useState<Job[]>([]);
 
 	const handleWriteJobName = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const { value } = event.target;
@@ -51,10 +58,6 @@ function Todo({ id, name }: TodoProps) {
 	};
 	const handleCreateJob = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-
-		const newJob: Job = { id: jobName, name: jobName };
-		setJobName("");
-		setJobs(prevJobs => [...prevJobs, newJob]);
 	};
 
 	return (
@@ -66,11 +69,16 @@ function Todo({ id, name }: TodoProps) {
 				handleCreateJob={handleCreateJob}
 				handleWriteJobName={handleWriteJobName}
 			/>
-			{jobs.map(({ id, name }) => (
-				<article className="Job" key={id}>
-					{name}
-				</article>
-			))}
+			<section className="Job-wrapper" ref={droppableRef} id={droppableId}>
+				{jobs.map(({ id, name }) => (
+					<Job
+						key={id}
+						name={name}
+						groupId={groupId}
+						droppableId={droppableId}
+					/>
+				))}
+			</section>
 		</article>
 	);
 }
