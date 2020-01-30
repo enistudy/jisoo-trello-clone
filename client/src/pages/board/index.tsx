@@ -1,7 +1,12 @@
 import * as React from "react";
+import { TodoContainer } from "components";
 
 function Board() {
-	return <main className="Board">Board</main>;
+	return (
+		<main className="Page">
+			<TodoContainer className="Container" />
+		</main>
+	);
 }
 
 export default Board;
