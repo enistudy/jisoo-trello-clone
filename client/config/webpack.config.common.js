@@ -9,7 +9,8 @@ module.exports = {
 	context: path.resolve(__dirname, "..", "src"),
 	entry: { app: ["@babel/polyfill", "./index.tsx"] },
 	output: {
-		path: path.resolve(__dirname, "..", "build")
+		path: path.resolve(__dirname, "..", "build"),
+		publicPath: "/"
 	},
 	module: {
 		rules: [
@@ -43,7 +44,7 @@ module.exports = {
 				test: /\.(png|jpg|jpeg|gif|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				loader: "file-loader",
 				options: {
-					publicPath: "./",
+					publicPath: "/",
 					name: "[name].[ext]?[hash]"
 				}
 			},
