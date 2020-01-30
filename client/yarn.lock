@@ -6136,6 +6136,65 @@ react-router@5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
+react-useful-dnd@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-useful-dnd/-/react-useful-dnd-0.0.1.tgz#51ebdde7a2aec4ebcf98b0656364d3213e1673c6"
+  integrity sha512-Dl2HEReQXY37yTnsN01IL2OIkzuaU9UHHFwUG/ccNm0UXbCyjgLV34Kl2S4pzL3KIjLL2wnqZBshmRnTalPD/w==
+  dependencies:
+    react "^16.12.0"
+    react-dom "^16.12.0"
+    uuid "^3.4.0"
+
+react-useful-dnd@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-useful-dnd/-/react-useful-dnd-0.0.3.tgz#9acf5ad37077609981f3f6e66075c0cf447e3d44"
+  integrity sha512-uBnZ4HK85ejWB8Xnc4Gy7y5e/juQI9O+JS58qmTcz+HGAzLugWm2FbWXfcWZ1CyeGr/jAr9kbJrCLLgh04K9ng==
+  dependencies:
+    react "^16.12.0"
+    react-dom "^16.12.0"
+    react-useful-dnd "^0.0.1"
+    uuid "^3.4.0"
+
+react-useful-dnd@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-useful-dnd/-/react-useful-dnd-0.0.4.tgz#2fc9fa59f38cf5833ba31d3f60cf905125103a9f"
+  integrity sha512-0sNd016qG8FFqkE62Kooxcn5uwg1ThpA7GNew8zHLkdvMGI5xLV2ljyDRYKD+/RpsZ44qo5kv9GmRSL+lXNjHQ==
+  dependencies:
+    react "^16.12.0"
+    react-dom "^16.12.0"
+    react-useful-dnd "^0.0.3"
+    uuid "^3.4.0"
+
+react-useful-dnd@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-useful-dnd/-/react-useful-dnd-0.0.5.tgz#ecd0406eabf09a5fb3aa4f60b36ea0ed7bc67ce0"
+  integrity sha512-VB1xYheJ1HYJXSY0itcPr+R3pOWi886L/ODRVn2jJz8edghVt9JEv6EMnF0cCldokb5rHXFXI80FwwiO0UdcAg==
+  dependencies:
+    react "^16.12.0"
+    react-dom "^16.12.0"
+    react-useful-dnd "^0.0.4"
+    uuid "^3.4.0"
+
+react-useful-dnd@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-useful-dnd/-/react-useful-dnd-0.0.8.tgz#72a572000468d8ce6272bc44753d6500b6e6f7a2"
+  integrity sha512-nkGtbOSfRYK9RGfhfehGBlffP0gMiTyh9n092fK9w5ldooKQZ8dNXGQAmXJ+vW9BqjFpJR8SQPHUvhrkIiI84A==
+  dependencies:
+    react "^16.12.0"
+    react-dom "^16.12.0"
+    react-useful-dnd "^0.0.5"
+    uuid "^3.4.0"
+
+react-useful-dnd@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-useful-dnd/-/react-useful-dnd-0.0.9.tgz#6e3f19dc03fb53991d2f7074e731f7fc00414da7"
+  integrity sha512-+8qmMfEfljBgzF/+G7GWkHrQibPAkTKa2N1iOgvgRCuGKnHRjLspFRKPg1RvTPGz0HKGcBwXD4BL9M9OhtRqog==
+  dependencies:
+    react "^16.12.0"
+    react-dom "^16.12.0"
+    react-useful-dnd "^0.0.8"
+    uuid "^3.4.0"
+
 react@^16.12.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
@@ -7537,7 +7596,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.0.1, uuid@^3.3.2:
+uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
